@@ -1,4 +1,5 @@
 import 'package:careerui/constants/constants.dart';
+import 'package:careerui/widgets/college_carousel.dart';
 import 'package:careerui/widgets/dummysearch_home.dart';
 import 'package:careerui/widgets/location_home.dart';
 import 'package:flutter/material.dart';
@@ -26,129 +27,239 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               height: 30,
             ),
-            Column(
+            collegeCarousel(),
+            Wrap(
+              alignment: WrapAlignment.center,
+              spacing: 10,
+              runSpacing: 10,
               children: [
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  height: 75,
+                  width: 75,
+                  decoration: BoxDecoration(
+                    color: mainHexColor,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(
-                        'Popular Colleges',
-                        style: TextStyle(
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1.5,
-                        ),
+                      Icon(
+                        Icons.engineering,
+                        color: Colors.white,
+                        size: 30,
                       ),
-                      GestureDetector(
-                        onTap: () => print('see all'),
-                        child: Text(
-                          'see all',
-                          style: TextStyle(
-                            color: mainHexColor,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 1.0,
-                          ),
-                        ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        'Enginering',
+                        style: TextStyle(color: Colors.white),
+                        overflow: TextOverflow.ellipsis,
                       )
                     ],
                   ),
                 ),
-                SizedBox(
-                  height: 15,
+                // vfhgvfkjhgvfkghjvjhg
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  height: 75,
+                  width: 75,
+                  decoration: BoxDecoration(
+                    color: mainHexColor,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Icon(
+                        FontAwesomeIcons.plus,
+                        color: Colors.white,
+                        size: 30,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        'medical',
+                        style: TextStyle(color: Colors.white),
+                        overflow: TextOverflow.ellipsis,
+                      )
+                    ],
+                  ),
                 ),
                 Container(
-                  height: 350,
-                  child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: 5,
-                      itemBuilder: (BuildContext context, int index) {
-                        return Container(
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20)),
-                          margin: EdgeInsets.all(10),
-                          padding: EdgeInsets.only(top: 10),
-                          width: 240,
-                          height: 200,
-                          child: Column(
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                  color: Colors.green,
-                                  borderRadius: BorderRadius.circular(20),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black26,
-                                      offset: Offset(0.0, 2.0),
-                                      blurRadius: 6.0,
-                                    )
-                                  ],
-                                ),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(20),
-                                  child: Image(
-                                    height: 240,
-                                    width: 220,
-                                    image: AssetImage(
-                                        'assets/images/college2.jpg'),
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 10),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            'Don Bosco',
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 20,
-                                            ),
-                                          ),
-                                          Text(
-                                            '⭐ 4.5',
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.grey,
-                                              fontSize: 15,
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Text(
-                                        'Kerala ,India',
-                                        style: TextStyle(
-                                          color: Colors.grey,
-                                          fontSize: 15,
-                                        ),
-                                        textAlign: TextAlign.start,
-                                      )
-                                    ],
-                                  ))
-                            ],
-                          ),
-                        );
-                      }),
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  height: 75,
+                  width: 75,
+                  decoration: BoxDecoration(
+                    color: mainHexColor,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Icon(
+                        FontAwesomeIcons.graduationCap,
+                        color: Colors.white,
+                        size: 30,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        'Degree',
+                        style: TextStyle(color: Colors.white),
+                        overflow: TextOverflow.ellipsis,
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  height: 75,
+                  width: 75,
+                  decoration: BoxDecoration(
+                    color: mainHexColor,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.home_repair_service,
+                        color: Colors.white,
+                        size: 30,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        'diploma',
+                        style: TextStyle(color: Colors.white),
+                        overflow: TextOverflow.ellipsis,
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  height: 75,
+                  width: 75,
+                  decoration: BoxDecoration(
+                    color: mainHexColor,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.engineering,
+                        color: Colors.white,
+                        size: 30,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        'Enginering',
+                        style: TextStyle(color: Colors.white),
+                        overflow: TextOverflow.ellipsis,
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  height: 75,
+                  width: 75,
+                  decoration: BoxDecoration(
+                    color: mainHexColor,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.engineering,
+                        color: Colors.white,
+                        size: 30,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        'Enginering',
+                        style: TextStyle(color: Colors.white),
+                        overflow: TextOverflow.ellipsis,
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  height: 75,
+                  width: 75,
+                  decoration: BoxDecoration(
+                    color: mainHexColor,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.engineering,
+                        color: Colors.white,
+                        size: 30,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        'Enginering',
+                        style: TextStyle(color: Colors.white),
+                        overflow: TextOverflow.ellipsis,
+                      )
+                    ],
+                  ),
                 )
+
+                //ends
               ],
             )
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(
+          icon: Icon(
+            Icons.house_siding_outlined,
+            size: 30,
+          ),
+          title: SizedBox.shrink(),
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(
+            Icons.local_pizza,
+            size: 30,
+          ),
+          title: SizedBox.shrink(),
+        ),
+        BottomNavigationBarItem(
+          icon: CircleAvatar(
+            radius: 15,
+            backgroundImage: NetworkImage('http://i.imgur.com/zL4Krbz.jpg'),
+          ),
+          title: SizedBox.shrink(),
+        ),
+      ]),
     );
   }
 }
